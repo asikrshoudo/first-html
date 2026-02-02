@@ -1,0 +1,96 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #B8860B;
+}
+
+nav {
+  background: linear-gradient(135deg, #FFFFE0 0%, #F0F8FF 100%);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav ul li.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000000;
+  margin-right: auto;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  nav ul li.logo {
+    margin-right: 0;
+    font-size: 1.5rem;
+  }
+  
+  nav ul li {
+    width: 100%;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 0.8rem 1rem;
+  }
+}
